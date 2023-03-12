@@ -84,5 +84,8 @@ My OpenWrt-Build Config
 /etc/coremark.sh && cat /etc/bench.log
 ```
 
-
+### 二次编译
+```bash
+rm -rf ./tmp && rm -rf .config
+```
 

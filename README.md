@@ -83,6 +83,10 @@ My OpenWrt-Build Config
 ```bash
 /etc/coremark.sh && cat /etc/bench.log
 ```
+取消登录密码
+```bash
+sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
+```
 
 ### 二次编译
 ```bash

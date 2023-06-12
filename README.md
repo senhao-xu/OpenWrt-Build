@@ -54,6 +54,8 @@ My OpenWrt-Build Config
    # 交换 LAN/WAN 口 (一般用于R2S)
    sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip/armv8/base-files/etc/board.d/02_network
    sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
+   #取消登录密码
+   sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
    ```
 
 4. 插件选择
@@ -82,10 +84,6 @@ My OpenWrt-Build Config
 
 ```bash
 /etc/coremark.sh && cat /etc/bench.log
-```
-取消登录密码
-```bash
-sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
 ```
 
 ### 二次编译

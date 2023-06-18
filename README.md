@@ -85,6 +85,13 @@ My OpenWrt-Build Config
 ```bash
 /etc/coremark.sh && cat /etc/bench.log
 ```
+编译指定版本内核
+修改`vim target/linux/x86/Makefile`
+```bash
+#将KERNEL_PATCHVER修改为5.15
+KERNEL_PATCHVER:=6.1
+KERNEL_TESTING_PATCHVER:=5.15
+```
 
 ### 二次编译
 ```bash
